@@ -43,13 +43,16 @@ $backgroundImage = get_field('background_image');
 <section id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($className); ?>" style="background-image: url(<?php echo $backgroundImage['url']; ?>)">
 
 	<div class="hero__wrapper">
+
+    <!-- Decoration -->
 		<?php if ( $largeDecorationText ): ?>
 			<div class="hero__large-decoration hero-large-decoration" aria-hidden="true">
 				<div class="hero-large-decoration__text"><?php echo $largeDecorationText; ?></div>
 			</div>
 		<?php endif; ?>
-		<div class="hero__media">
 
+    <!-- Media -->
+		<div class="hero__media">
 			<?php 
 				if( !empty( $heroImageMain ) ): ?>
 				<div class="hero__media-main">
@@ -64,15 +67,15 @@ $backgroundImage = get_field('background_image');
 					<img src="<?php echo esc_url($heroImageTop['url']); ?>" alt="<?php echo esc_attr($heroImageTop['alt']); ?>" class="hero__image" />
 				</picture>
 			<?php endif; ?>
-
 			<?php 
 			if( !empty( $heroImageBottom ) ): ?>
 				<picture class="hero__picture hero__picture-bottom">
 					<img src="<?php echo esc_url($heroImageBottom['url']); ?>" alt="<?php echo esc_attr($heroImageBottom['alt']); ?>" class="hero__image" />
 				</picture>
 			<?php endif; ?>
-
 		</div>
+		
+    <!-- Content -->
 		<div class="hero__content hero-content">
 			<header class="hero__header hero-header">
 				<?php if ( $heroSubtitle ): ?>
@@ -95,6 +98,7 @@ $backgroundImage = get_field('background_image');
 				<a class="hero-content__button" href="<?php echo esc_url($heroButton['url']); ?>" target="<?php echo esc_attr($heroButton['target'] ?: '_self'); ?>"> <?php echo esc_html($heroButton['title']); ?></a>
 			<?php endif; ?>
 		</div>
+		
 	</div>
 </section>
 <?php

@@ -41,14 +41,34 @@ function register_acf_block_types() {
         'mode'              => 'edit',
         'supports'          => array('align' => false),
         'category'          => 'bsa-acf-blocks',
-        'icon'              => 'format-quote',
+        'icon'              => 'align-full-width',
         'keywords'          => array( 'hero' ),
-        // 'enqueue_style'     => get_template_directory_uri() . '/dist/css/index.css',
         'example'  => array(
             'attributes' => array(
                 'mode' => 'preview',
                 'data' => array(
                     'hero_component_preview' => get_template_directory_uri() . '/acf-preview-images/hero-component-preview.png',
+                )
+            )
+        )
+    ));
+
+    // Block Culture
+    acf_register_block_type(array(
+        'name'              => 'culture',
+        'title'             => __('Culture'),
+        'description'       => __('Used to display Culture block'),
+        'render_template'   => get_stylesheet_directory() . '/template-parts/blocks/Culture.php',
+        'mode'              => 'edit',
+        'supports'          => array('align' => false),
+        'category'          => 'bsa-acf-blocks',
+        'icon'              => 'laptop',
+        'keywords'          => array( 'culture' ),
+        'example'  => array(
+            'attributes' => array(
+                'mode' => 'preview',
+                'data' => array(
+                    'culture_component_preview' => get_template_directory_uri() . '/acf-preview-images/culture-component-preview.png',
                 )
             )
         )
