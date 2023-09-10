@@ -74,6 +74,27 @@ function register_acf_block_types() {
         )
     ));
 
+    // Block About
+    acf_register_block_type(array(
+        'name'              => 'about',
+        'title'             => __('About'),
+        'description'       => __('Used to display About block'),
+        'render_template'   => get_stylesheet_directory() . '/template-parts/blocks/About.php',
+        'mode'              => 'edit',
+        'supports'          => array('align' => false),
+        'category'          => 'bsa-acf-blocks',
+        'icon'              => 'align-pull-right',
+        'keywords'          => array( 'about' ),
+        'example'  => array(
+            'attributes' => array(
+                'mode' => 'preview',
+                'data' => array(
+                    'about_component_preview' => get_template_directory_uri() . '/acf-preview-images/about-component-preview.png',
+                )
+            )
+        )
+    ));
+
 }
 add_action('acf/init', 'register_acf_block_types');
 
