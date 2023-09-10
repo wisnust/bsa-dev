@@ -1,0 +1,41 @@
+@use 'sass:math';
+
+// Rem Calculation of Pixel Values
+$rem-base: 16px;
+
+@function strip-unit($number) {
+	@if type-of($number) == 'number' and not unitless($number) {
+		@return math.div($number, ($number * 0 + 1));
+	}
+
+	@return $number;
+}
+
+@function convert-to-rem($value, $base-value: $rem-base, $limit: true) {
+	@if abs($value) < 8 and $limit {
+		@return $value * 1px;
+	}
+
+	$value: math.div(strip-unit($value), strip-unit($base-value)) * 1rem;
+
+	@return $value;
+}
+
+@function rem-calc($values, $limit: true, $base-value: $rem-base) {
+	$max: length($values);
+
+	@if $max == 1 {
+		@return convert-to-rem(nth($values, 1), $base-value, $limit);
+	}
+
+	$remValues: ();
+
+	@for $i from 1 through $max {
+		$remValues: append(
+			$remValues,
+			convert-to-rem(nth($values, $i), $base-value)
+		);
+	}
+
+	@return $remValues;
+}
