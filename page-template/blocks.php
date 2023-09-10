@@ -16,8 +16,6 @@ get_header();
 
   <main id="blocks-page" class="blocks-page">
 		<?php 
-      get_template_part( 'template-parts/hero' );
-      // get_template_part( 'template-parts/navigation' );
 		  while ( have_posts() ) : the_post();
 				the_content();
 			endwhile;

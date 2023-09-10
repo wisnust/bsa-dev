@@ -171,9 +171,14 @@ require get_template_directory() . '/inc/template-functions.php';
 require get_template_directory() . '/inc/customizer.php';
 
 /**
- * Customizer additions.
+ * Nav Walker
  */
 require get_template_directory() . '/inc/nav-walker.php';
+
+/**
+ * ACF
+ */
+require get_template_directory() . '/inc/acf.php';
 
 /**
  * Load Jetpack compatibility file.
