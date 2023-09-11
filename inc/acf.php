@@ -95,6 +95,27 @@ function register_acf_block_types() {
         )
     ));
 
+    // Block Openings
+    acf_register_block_type(array(
+        'name'              => 'openings',
+        'title'             => __('Openings'),
+        'description'       => __('Used to display Openings block'),
+        'render_template'   => get_stylesheet_directory() . '/template-parts/blocks/Openings.php',
+        'mode'              => 'edit',
+        'supports'          => array('align' => false),
+        'category'          => 'bsa-acf-blocks',
+        'icon'              => 'list-view',
+        'keywords'          => array( 'openings' ),
+        'example'  => array(
+            'attributes' => array(
+                'mode' => 'preview',
+                'data' => array(
+                    'openings_component_preview' => get_template_directory_uri() . '/acf-preview-images/openings-component-preview.png',
+                )
+            )
+        )
+    ));
+
 }
 add_action('acf/init', 'register_acf_block_types');
 
@@ -121,19 +142,6 @@ function my_acf_json_save_point( $path ) {
     
     // return
     return $path;
-}
-
-add_filter('acf/location/rule_values/post_type', 'acf_location_rules_values_post_type');
-
-function acf_location_rules_values_post_type($choices) {
-  $choices['none'] = 'None of the Above';
-  return $choices;
-}
-
-add_filter('acf/location/rule_match/post_type', 'acf_location_rules_match_none', 10, 3);
-
-function acf_location_rules_match_none($match, $rule, $options) {
-  return -1;
 }
 
 function enqueue_css_in_admin_block() {

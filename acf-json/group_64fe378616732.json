@@ -136,21 +136,6 @@
             "delay": 0
         },
         {
-            "key": "field_64fe378631542",
-            "label": "Button",
-            "name": "about_button",
-            "type": "link",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "array"
-        },
-        {
             "key": "field_64fe3a3ffbd34",
             "label": "Items",
             "name": "",
@@ -342,5 +327,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1694382793
+    "modified": 1694383420
 }

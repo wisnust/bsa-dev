@@ -1,11 +1,12 @@
 {
-    "key": "group_64fe326024f19",
-    "title": "Block: Culture",
+    "key": "group_64fe523c9faf2",
+    "title": "Block: Openings",
     "fields": [
         {
-            "key": "field_64fe326028c82",
-            "label": "Culture",
+            "key": "field_64fe523ca6afd",
+            "label": "Openings",
             "name": "",
+            "aria-label": "",
             "type": "message",
             "instructions": "",
             "required": 0,
@@ -20,9 +21,10 @@
             "esc_html": 0
         },
         {
-            "key": "field_64fe32602cbb9",
+            "key": "field_64fe523caa602",
             "label": "Main Content",
             "name": "",
+            "aria-label": "",
             "type": "tab",
             "instructions": "",
             "required": 0,
@@ -36,9 +38,10 @@
             "endpoint": 0
         },
         {
-            "key": "field_64fe326030802",
+            "key": "field_64fe523cae015",
             "label": "Subtitle",
-            "name": "culture_subtitle",
+            "name": "openings_subtitle",
+            "aria-label": "",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -55,9 +58,10 @@
             "maxlength": ""
         },
         {
-            "key": "field_64fe32603443f",
+            "key": "field_64fe523cb1af9",
             "label": "Title",
-            "name": "culture_title",
+            "name": "openings_title",
+            "aria-label": "",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -74,9 +78,10 @@
             "maxlength": ""
         },
         {
-            "key": "field_64fe3260381c9",
+            "key": "field_64fe523cb5577",
             "label": "Content Text",
-            "name": "culture_content_text",
+            "name": "openings_content_text",
+            "aria-label": "",
             "type": "wysiwyg",
             "instructions": "",
             "required": 0,
@@ -93,9 +98,46 @@
             "delay": 0
         },
         {
-            "key": "field_64fe32603f9ce",
-            "label": "Images",
+            "key": "field_64fe52b98bb83",
+            "label": "Content Featured",
+            "name": "openings_content_featured",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": 2,
+            "new_lines": ""
+        },
+        {
+            "key": "field_64fe523cb8fd7",
+            "label": "Button",
+            "name": "openings_button",
+            "aria-label": "",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array"
+        },
+        {
+            "key": "field_64fe528f8bb81",
+            "label": "Open Roles",
             "name": "",
+            "aria-label": "",
             "type": "tab",
             "instructions": "",
             "required": 0,
@@ -109,10 +151,11 @@
             "endpoint": 0
         },
         {
-            "key": "field_64fe3260434fe",
-            "label": "Image Main",
-            "name": "culture_image_main",
-            "type": "image",
+            "key": "field_64fe681f98ff8",
+            "label": "Open Roles",
+            "name": "open_roles",
+            "aria-label": "",
+            "type": "relationship",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -121,69 +164,30 @@
                 "class": "",
                 "id": ""
             },
-            "return_format": "array",
-            "preview_size": "medium",
-            "library": "all",
-            "min_width": "",
-            "min_height": "",
-            "min_size": "",
-            "max_width": "",
-            "max_height": "",
-            "max_size": "",
-            "mime_types": ""
+            "post_type": [
+                "job_listing"
+            ],
+            "post_status": [
+                "publish"
+            ],
+            "taxonomy": "",
+            "filters": [
+                "search",
+                "post_type",
+                "taxonomy"
+            ],
+            "return_format": "object",
+            "min": "",
+            "max": "",
+            "elements": "",
+            "bidirectional": 0,
+            "bidirectional_target": []
         },
         {
-            "key": "field_64fe3260470a0",
-            "label": "Image Top",
-            "name": "culture_image_top",
-            "type": "image",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "50",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "array",
-            "preview_size": "medium",
-            "library": "all",
-            "min_width": "",
-            "min_height": "",
-            "min_size": "",
-            "max_width": "",
-            "max_height": "",
-            "max_size": "",
-            "mime_types": ""
-        },
-        {
-            "key": "field_64fe32604ad4c",
-            "label": "Image Side",
-            "name": "culture_image_side",
-            "type": "image",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "50",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "array",
-            "preview_size": "medium",
-            "library": "all",
-            "min_width": "",
-            "min_height": "",
-            "min_size": "",
-            "max_width": "",
-            "max_height": "",
-            "max_size": "",
-            "mime_types": ""
-        },
-        {
-            "key": "field_64fe32604e87d",
+            "key": "field_64fe523ccb78d",
             "label": "Advanced",
             "name": "",
+            "aria-label": "",
             "type": "tab",
             "instructions": "",
             "required": 0,
@@ -197,9 +201,10 @@
             "endpoint": 0
         },
         {
-            "key": "field_64fe326052343",
+            "key": "field_64fe523ccf159",
             "label": "Decoration Number",
             "name": "decoration_number",
+            "aria-label": "",
             "type": "number",
             "instructions": "",
             "required": 0,
@@ -218,15 +223,16 @@
             "step": ""
         },
         {
-            "key": "field_64fe32cd5414b",
+            "key": "field_64fe53208bb84",
             "label": "Decoration Label 1",
             "name": "decoration_label_1",
+            "aria-label": "",
             "type": "text",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "33",
+                "width": "50",
                 "class": "",
                 "id": ""
             },
@@ -237,15 +243,16 @@
             "maxlength": ""
         },
         {
-            "key": "field_64fe32e05414c",
+            "key": "field_64fe53328bb85",
             "label": "Decoration Label 2",
             "name": "decoration_label_2",
+            "aria-label": "",
             "type": "text",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "33",
+                "width": "50",
                 "class": "",
                 "id": ""
             },
@@ -261,7 +268,7 @@
             {
                 "param": "block",
                 "operator": "==",
-                "value": "acf\/culture"
+                "value": "acf\/openings"
             }
         ]
     ],
@@ -271,7 +278,8 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
-    "active": 1,
+    "active": true,
     "description": "",
-    "modified": 1694383455
+    "show_in_rest": 0,
+    "modified": 1694394430
 }
