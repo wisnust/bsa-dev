@@ -24,9 +24,12 @@ class Custom_Nav_Walker extends Walker_Nav_Menu {
 
 			$output .= $indent . '<li id="menu-item-' . $item->ID . '" class="' . esc_attr($css_classes) . '">';
 			$output .= '<a href="' . esc_attr($item->url) . '" class="navigation-menu__link">';
-
+			$custom_icon = get_field('menu_icon', $item->ID);
+			
 			if ($depth === 1) {
-					$output .= '<img src="dist/images/general/welding-icon.svg" alt="" class="navigation-menu__submenu-icon">';
+				if ($custom_icon) {
+					$output .= '<img src="' . esc_attr($custom_icon) . '" alt="" class="navigation-menu__submenu-icon">';
+				}
 			} else {
 					$output .= '<span class="navigation-menu__indicator">01</span>';
 			}
