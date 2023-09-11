@@ -19,6 +19,7 @@
 	z-index: 6;
 	background-color: $color-licorice;
 	padding: rem-calc(70) rem-calc(22);
+	overflow: hidden;
 
 	@include media('>phone') {
 		padding: rem-calc(60) rem-calc(20);
@@ -26,6 +27,20 @@
 
 	@include media('>tablet') {
 		padding: rem-calc(65) rem-calc(60);
+		.footer:before {
+			background-image: none !important;
+		}
+		.footer:after {
+			width: 70%;
+		}
+		.footer-bg {
+			display: block;
+			position: absolute;
+			top: 0;
+			left: 0;
+			max-width: 56.25rem;
+			height: 120%;
+		}
 	}
 
 	@include media('>desktop-small') {
@@ -40,6 +55,10 @@
 		padding: rem-calc(85) rem-calc(300) rem-calc(70);
 	}
 
+	.footer-bg {
+		display: none;
+	}
+	
 	&::before,
 	&::after {
 		content: '';
@@ -480,8 +499,9 @@
 // Footer Navigation
 .footer-navigation {
 	@extend %footer__mobile-max;
-
+	position: relative;
 	text-align: center;
+	z-index: 5;
 
 	@include media('>phone') {
 		display: flex;
