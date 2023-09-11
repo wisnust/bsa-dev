@@ -39,7 +39,10 @@ function register_acf_block_types() {
         'description'       => __('Used to display Hero block'),
         'render_template'   => get_stylesheet_directory() . '/template-parts/blocks/Hero.php',
         'mode'              => 'edit',
-        'supports'          => array('align' => false),
+        'supports'          => array(
+            'align' => false,
+            'anchor' => true
+        ),
         'category'          => 'bsa-acf-blocks',
         'icon'              => 'align-full-width',
         'keywords'          => array( 'hero' ),
@@ -60,7 +63,10 @@ function register_acf_block_types() {
         'description'       => __('Used to display Culture block'),
         'render_template'   => get_stylesheet_directory() . '/template-parts/blocks/Culture.php',
         'mode'              => 'edit',
-        'supports'          => array('align' => false),
+        'supports'          => array(
+            'align' => false,
+            'anchor' => true
+        ),
         'category'          => 'bsa-acf-blocks',
         'icon'              => 'laptop',
         'keywords'          => array( 'culture' ),
@@ -81,7 +87,10 @@ function register_acf_block_types() {
         'description'       => __('Used to display About block'),
         'render_template'   => get_stylesheet_directory() . '/template-parts/blocks/About.php',
         'mode'              => 'edit',
-        'supports'          => array('align' => false),
+        'supports'          => array(
+            'align' => false,
+            'anchor' => true
+        ),
         'category'          => 'bsa-acf-blocks',
         'icon'              => 'align-pull-right',
         'keywords'          => array( 'about' ),
@@ -102,7 +111,10 @@ function register_acf_block_types() {
         'description'       => __('Used to display Openings block'),
         'render_template'   => get_stylesheet_directory() . '/template-parts/blocks/Openings.php',
         'mode'              => 'edit',
-        'supports'          => array('align' => false),
+        'supports'          => array(
+            'align' => false,
+            'anchor' => true
+        ),
         'category'          => 'bsa-acf-blocks',
         'icon'              => 'list-view',
         'keywords'          => array( 'openings' ),
@@ -151,3 +163,20 @@ function enqueue_css_in_admin_block() {
     }
 }
 add_action( 'admin_enqueue_scripts', 'enqueue_css_in_admin_block' );
+
+
+function register_custom_block() {
+    acf_register_block_type(array(
+        'name' => 'custom-block',
+        'title' => 'Custom Block',
+        'render_callback' => 'render_custom_block',
+        'category' => 'common',
+        'attributes' => array(
+            'customId' => array(
+                'type' => 'string',
+                'default' => '',
+            ),
+        ),
+    ));
+}
+add_action('acf/init', 'register_custom_block');
