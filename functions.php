@@ -181,6 +181,11 @@ require get_template_directory() . '/inc/nav-walker.php';
 require get_template_directory() . '/inc/acf.php';
 
 /**
+ * Post Types
+ */
+require get_template_directory() . '/inc/post-types.php';
+
+/**
  * Load Jetpack compatibility file.
  */
 if ( defined( 'JETPACK__VERSION' ) ) {
