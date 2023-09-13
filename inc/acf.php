@@ -128,6 +128,30 @@ function register_acf_block_types() {
         )
     ));
 
+    // Block Testimonials
+    acf_register_block_type(array(
+        'name'              => 'testimonials',
+        'title'             => __('Testimonials'),
+        'description'       => __('Used to display Testimonials block'),
+        'render_template'   => get_stylesheet_directory() . '/template-parts/blocks/Testimonials.php',
+        'mode'              => 'edit',
+        'supports'          => array(
+            'align' => false,
+            'anchor' => true
+        ),
+        'category'          => 'bsa-acf-blocks',
+        'icon'              => 'testimonial',
+        'keywords'          => array( 'testimonials' ),
+        'example'  => array(
+            'attributes' => array(
+                'mode' => 'preview',
+                'data' => array(
+                    'testimonials_component_preview' => get_template_directory_uri() . '/acf-preview-images/testimonials-component-preview.png',
+                )
+            )
+        )
+    ));
+
 }
 add_action('acf/init', 'register_acf_block_types');
 
