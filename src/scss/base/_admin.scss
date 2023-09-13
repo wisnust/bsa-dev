@@ -1,0 +1,28 @@
+.acf-block-preview {
+  .hero__wrapper {
+    padding-right: rem-calc(16);
+    padding-left: rem-calc(16);
+  }
+  .openings__wrapper {
+    padding-right: rem-calc(16);
+    padding-left: rem-calc(16);
+    &::before, .openings-decoration {
+      display: none;
+    }
+    .openings-list {
+      padding: 0;
+      list-style: none;
+    }
+  }
+  .culture__wrapper {
+    padding-right: rem-calc(16);
+    padding-left: rem-calc(16);
+    .culture-content {
+      padding: rem-calc(24) rem-calc(16);
+    }
+  }
+  .about {
+    padding-right: rem-calc(16);
+    padding-left: rem-calc(16);
+  }
+}
