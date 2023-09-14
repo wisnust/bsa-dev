@@ -165,7 +165,7 @@
                 "id": ""
             },
             "post_type": [
-                "job_listing"
+                "job-listing"
             ],
             "post_status": [
                 "publish"
@@ -281,5 +281,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1694394430
+    "modified": 1694687876
 }
