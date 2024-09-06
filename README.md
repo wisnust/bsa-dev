@@ -2,6 +2,8 @@
 
 This repository contains the source code for the BSA Test WordPress project, which utilizes the Advanced Custom Fields (ACF) plugin to enhance the functionality and customization options of the WordPress website.
 
+Test Commit
+
 ## Project Directory Structure
 
 **─ acf-json/**
